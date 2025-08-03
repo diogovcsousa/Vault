@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cofre de Conteúdo</title>
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#101010" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- PDF library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <h1>Cofre de Conteúdo</h1>
+
+  <label for="memory">Escreve aqui o teu conteúdo</label>
+  <textarea id="memory" placeholder="Partilha ideias, memórias, planos…"></textarea>
+
+  <select id="tag">
+    <option value="">Tipo…</option>
+    <option value="Ideia">Ideia</option>
+    <option value="História">História</option>
+    <option value="Plano">Plano</option>
+    <option value="Lição de Vida">Lição de Vida</option>
+    <option value="Reflexão">Reflexão</option>
+    <option value="Receita">Receita</option>
+  </select>
+
+  <button onclick="saveEntry()">Guardar Conteúdo</button>
+  <button onclick="exportSelectedToPDF()">📄 Exportar selecionados</button>
+  <button onclick="exportAllToPDF()">📄 Exportar todos</button>
+
+  <div id="entries"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
