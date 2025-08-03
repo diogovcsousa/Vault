@@ -1,6 +1,6 @@
 self.addEventListener('install', e=>{
   e.waitUntil(
-    caches.open('vault-cache-v2').then(c=>c.addAll([
+    caches.open('vault-cache-v3').then(c=>c.addAll([
       './index.html','./style.css','./script.js','./manifest.json',
       './icon-192.png','./icon-512.png'
     ]))
